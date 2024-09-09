@@ -1,0 +1,59 @@
+# Ignore node_modules for both GraphQL and Node.js app
+node_modules/
+
+# Ignore log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore environment variables and sensitive data files
+.env
+.env.local
+.env.*.local
+
+# Ignore build and output directories
+dist/
+build/
+
+# Ignore Docker-related files
+docker-compose.override.yml
+.dockerignore
+
+# Ignore compiled TypeScript files
+*.tsbuildinfo
+
+# Ignore IDE specific files (Visual Studio Code)
+.vscode/
+.idea/
+
+# Ignore coverage and test-related directories and files
+coverage/
+*.lcov
+*.lcov.*
+
+# Ignore test-related files and directories
+**/__tests__/
+**/*.test.js
+**/*.spec.js
+**/*.test.ts
+**/*.spec.ts
+**/tests/
+jest.config.js
+jest.setup.js
+
+# Ignore temporary files
+tmp/
+temp/
+*.tmp
+
+# Ignore cache directories
+.cache/
+.pulumi/
+
+# Ignore specific Dockerfiles
+Dockerfile.*
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db

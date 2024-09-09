@@ -1,16 +1,27 @@
 {
-  "name": "graphql-server",
-  "version": "1.0.0",
-  "main": "src/index.ts",
+  "name": "graphql-sandbox",
+  "version": "18.0.0",
+  "description": "GraphQL sandbox",
+  "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "test": "test"
   },
-  "dependencies": {
-    "@apollo/server": "^4.6.0",
-    "graphql": "^16.6.0",
-    "typescript": "^5.0.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knose-larry/graphql-sandbox.git"
   },
-  "devDependencies": {
-    "ts-node": "^10.9.1"
-  }
+  "keywords": [
+    "larry-sandbox"
+  ],
+  "author": "larry.nguyen@knose.com.au",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/knose-larry/graphql-sandbox/issues"
+  },
+  "private": true,
+  "workspaces": [
+    "apps",
+    "dbserver"
+  ],
+  "homepage": "https://github.com/knose-larry/graphql-sandbox#readme"
 }

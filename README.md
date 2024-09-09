@@ -1,0 +1,1 @@
+GraphQL playground for learning

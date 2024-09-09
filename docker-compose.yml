@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  graphql-apps:
+    build: ./apps
+    container_name: graphql-apps
+    ports:
+      - "3015:3015"
+    volumes:
+      - ./apps:/usr/src/app
+    environment:
+      NODE_ENV: development
+    networks:
+      - app-network
+
+  graphql-server:
+    build: ./dbserver
+    container_name: graphql-server
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./dbserver:/usr/src/app
+    environment:
+      NODE_ENV: development
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
