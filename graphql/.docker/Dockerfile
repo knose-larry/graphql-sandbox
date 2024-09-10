@@ -17,7 +17,7 @@ RUN npm install
 RUN npm install -g ts-node
 
 # Expose the port
-EXPOSE 3015
+EXPOSE 4000
 
 # Command to run the application
-CMD ["npm", "run", "start-apps"]
+CMD ["npm", "run", "start-graphql"]

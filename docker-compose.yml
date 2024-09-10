@@ -2,24 +2,28 @@ version: '3.8'
 
 services:
   graphql-apps:
-    build: ./apps
+    build:
+      context: .
+      dockerfile: ./apps/.docker/Dockerfile
     container_name: graphql-apps
     ports:
-      - "3015:3015"
+      - 3015:3015
     volumes:
-      - ./apps:/usr/src/app
+      - .:/usr/src/app
     environment:
       NODE_ENV: development
     networks:
       - app-network
 
   graphql-server:
-    build: ./dbserver
+    build: 
+      context: .
+      dockerfile: ./graphql/.docker/Dockerfile
     container_name: graphql-server
     ports:
-      - "4000:4000"
+      - 4000:4000
     volumes:
-      - ./dbserver:/usr/src/app
+      - .:/usr/src/app
     environment:
       NODE_ENV: development
     networks:
