@@ -1,0 +1,18 @@
+type User {
+  id: ID!
+  username: String!
+  email: String!
+  posts: [Post!]
+}
+
+# Queries for User
+type Query {
+  users: [User!]
+  user(id: ID!): User
+}
+
+# Mutations for User
+type Mutation {
+  createUser(username: String!, email: String!): User
+  deleteUser(id: ID!): Boolean
+}
