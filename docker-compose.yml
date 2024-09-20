@@ -18,7 +18,7 @@ services:
   graphql-server:
     build: 
       context: .
-      dockerfile: ./graphql/.docker/Dockerfile
+      dockerfile: ./graphql-server/.docker/Dockerfile
     container_name: graphql-server
     ports:
       - 4000:4000

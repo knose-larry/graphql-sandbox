@@ -7,7 +7,7 @@
     "postinstall": "npm run",
     "test": "test",
     "start-apps": "npm run start-apps --workspace=apps",
-    "start-graphql": "npm run start-graphql --workspace=graphql"
+    "start-graphql": "npm run start-graphql --workspace=graphql-server"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
   "private": true,
   "workspaces": [
     "apps",
-    "graphql"
+    "graphql-server"
   ],
   "dependencies": {
     "ts-node": "^10.0.0",
